@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "video-app",
+    "slug": "video-app",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ]
+  }
+}
