@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, ImageBackground, Image, Text } from "react-native";
+import { StyleSheet, View, ImageBackground, Image } from "react-native";
 import {
   PanGestureHandler,
   GestureHandlerRootView,
@@ -88,7 +88,11 @@ export default function App() {
               <PanGestureHandler
                 key={index}
                 onGestureEvent={onGestureEvents[index]}
-              ></PanGestureHandler>
+              >
+                <Animated.View style={[styles.box, animatedStyles[index]]}>
+                  <Image source={image} style={styles.image} />
+                </Animated.View>
+              </PanGestureHandler>
             ))}
           </View>
         </View>
@@ -119,7 +123,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: boxSize / 2,
     position: "absolute",
-    backgroundColor: "rgba(255, 255, 255, 0.5)",
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
     borderWidth: 0.1,
     borderColor: "#eee",
   },
